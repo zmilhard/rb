@@ -1,5 +1,6 @@
 from multiprocessing.connection import wait
 import string
+from typing import Dict, List
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
@@ -42,7 +43,7 @@ TITLE = "title"
 TAG = "tags"
 DESCRIPTION = "description"
 
-output = {
+output: Dict[str, List[str]] = {
     URL : [],
     ID : [],
     TITLE : [],
